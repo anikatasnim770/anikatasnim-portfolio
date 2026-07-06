@@ -1,3 +1,4 @@
+
 /* ============================================================
    ANIKA TASNIM PORTFOLIO
    STYLE.CSS
@@ -2445,6 +2446,267 @@ padding:30px;
 section{
 
 padding:90px 0;
+
+}
+
+}
+
+/* Ripple */
+
+button,
+a{
+
+position:relative;
+overflow:hidden;
+
+}
+
+.ripple{
+
+position:absolute;
+
+border-radius:50%;
+
+background:rgba(255,255,255,.35);
+
+transform:scale(0);
+
+animation:ripple .7s linear;
+
+pointer-events:none;
+
+}
+
+@keyframes ripple{
+
+to{
+
+transform:scale(4);
+
+opacity:0;
+
+}
+
+}
+/* ============================================================
+BACKGROUND PARTICLES
+============================================================ */
+
+#particles{
+
+position:fixed;
+
+inset:0;
+
+pointer-events:none;
+
+z-index:-4;
+
+overflow:hidden;
+
+}
+
+.particle{
+
+position:absolute;
+
+bottom:-20px;
+
+width:3px;
+
+height:3px;
+
+border-radius:50%;
+
+background:#60a5fa;
+
+animation:particleUp linear infinite;
+
+}
+
+@keyframes particleUp{
+
+from{
+
+transform:translateY(0);
+
+opacity:0;
+
+}
+
+20%{
+
+opacity:.5;
+
+}
+
+to{
+
+transform:translateY(-120vh);
+
+opacity:0;
+
+}
+
+}
+
+/* ============================================================
+FLOATING TECH WORDS
+============================================================ */
+
+#floating-tech{
+
+position:fixed;
+
+inset:0;
+
+pointer-events:none;
+
+overflow:hidden;
+
+z-index:-3;
+
+}
+
+#floating-tech span{
+
+position:absolute;
+
+color:rgba(255,255,255,.05);
+
+font-size:13px;
+
+font-weight:700;
+
+letter-spacing:1px;
+
+animation:floatTech linear infinite;
+
+user-select:none;
+
+}
+
+@keyframes floatTech{
+
+0%{
+
+transform:translateY(40px);
+
+opacity:0;
+
+}
+
+20%{
+
+opacity:1;
+
+}
+
+80%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(-140px);
+
+opacity:0;
+
+}
+
+}
+
+/* ============================================================
+STARS
+============================================================ */
+
+.star{
+
+position:fixed;
+
+width:2px;
+
+height:2px;
+
+background:white;
+
+border-radius:50%;
+
+opacity:.2;
+
+pointer-events:none;
+
+animation:twinkle 4s infinite;
+
+z-index:-5;
+
+}
+
+@keyframes twinkle{
+
+0%,100%{
+
+opacity:.1;
+
+}
+
+50%{
+
+opacity:.8;
+
+}
+
+}
+
+/* ============================================================
+MOBILE MENU
+============================================================ */
+
+.mobile-menu{
+
+display:none;
+
+font-size:28px;
+
+cursor:pointer;
+
+}
+
+@media(max-width:900px){
+
+.mobile-menu{
+
+display:block;
+
+}
+
+nav ul{
+
+display:none;
+
+position:absolute;
+
+top:82px;
+
+left:0;
+
+width:100%;
+
+background:#08111f;
+
+padding:30px;
+
+flex-direction:column;
+
+gap:25px;
+
+}
+
+nav ul.showMenu{
+
+display:flex;
 
 }
 
